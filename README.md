@@ -2,6 +2,10 @@
 
 This repository contains scripts to support the use of and digital forensic investigations with (SOF-)ELK
 
+## Requirements
+
+* ELK stack with Logstash configured to expect input from Winlogbeat (in the example below, Logstash has a beats input listening on port 5045).
+
 ## Usage
 ```PowerShell
 PS C:\elk_supporting_scripts> .\load_offline_evtx_to_elk.ps1
