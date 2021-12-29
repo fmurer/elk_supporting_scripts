@@ -55,7 +55,7 @@ function Load-EVTXDir {
     foreach($file in $files) {
         # Progress Bar
         $complete = ($counter / $file_count) * 100
-        Write-Progress -Activity "$counter of $file_count EVTX files in $folder sent to ELK" -Status "Uploading $file ..." -PercentComplete $complete
+        Write-Progress -Activity "$counter of $file_count EVTX files in $evtx_dir sent to ELK" -Status "Uploading $file ..." -PercentComplete $complete
 
         # Load file
         Load-EVTXFile $file $sof_elk
