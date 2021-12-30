@@ -29,7 +29,7 @@ mkdir -p $TEMP_SIGMA_SEARCHES
 
 for s in $(find $TEMP_SIGMA_RULES/rules/windows/ -type f); do 
 	name=$(basename -- $s); 
-	sigmac --target kibana-ndjson --config $TEMP_SIGMA_RULES/tools/config/winlogbeat.yml $s > $TEMP_SIGMA_SEARCHES/$name.ndjson; 
+	sigmac --target kibana-ndjson --config $TEMP_SIGMA_RULES/tools/config/winlogbeat-modules-enabled.yml $s > $TEMP_SIGMA_SEARCHES/$name.ndjson; 
 	echo "[+]  Created - $s";
 done
 
