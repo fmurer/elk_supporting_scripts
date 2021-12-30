@@ -42,7 +42,7 @@ function Load-EVTXDir {
 
     # Loop through every folder recursively
     foreach($folder in $folders) {
-        Load-EVTXDir $folder 
+        Load-EVTXDir $folder $sof_elk
     }
 
     $counter = 1

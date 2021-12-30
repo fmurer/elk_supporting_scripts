@@ -12,8 +12,7 @@
 winlogbeat.event_logs:
   - name: ${EVTX_FILE}
     no_more_events: stop
-
-processors:
+    processors:
       - script:
           when.equals.winlog.channel: Security
           lang: javascript
